@@ -1,0 +1,38 @@
+panel: "Thyroid"
+locale_notes:
+  en: "Thyroid Function"
+  de: "Schilddrüsenfunktion"
+  lt: "Skydliaukės funkcija"
+analytes:
+  - key: "TSH"
+    synonyms: ["Thyroid Stimulating Hormone"]
+    unit: "mIU/L"
+    ref_range:
+      male: [0.4, 4.0]
+      female: [0.4, 4.0]
+    logic:
+      - if: "< 0.1"
+        severity: "flag-low"
+        message:
+          en: "TSH below range may reflect hyperthyroid activity."
+          de: "TSH unter dem Bereich kann auf Hyperthyreose hinweisen."
+          lt: "TSH žemiau normos gali rodyti hipertiroidizmą."
+      - if: "> 10"
+        severity: "critical"
+        message:
+          en: "TSH above 10 mIU/L warrants clinical follow-up."
+          de: "TSH über 10 mIU/L erfordert ärztliche Abklärung."
+          lt: "TSH virš 10 mIU/L reikalauja gydytojo įvertinimo."
+  - key: "Free T4"
+    synonyms: ["FT4", "Free Thyroxine"]
+    unit: "ng/dL"
+    ref_range:
+      male: [0.8, 1.8]
+      female: [0.8, 1.8]
+    logic:
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Free T4 below reference range. Discuss with your clinician."
+          de: "Freies T4 unter dem Referenzbereich."
+          lt: "Laisvas T4 žemiau normos."

@@ -1,0 +1,23 @@
+{
+  "appName": "LabLens",
+  "tagline": "Verstehen Sie Ihre Laborwerte sicher",
+  "navigation": {
+    "upload": "Import",
+    "analyze": "Analyse",
+    "compare": "Vergleichen",
+    "settings": "Einstellungen",
+    "about": "Info"
+  },
+  "actions": {
+    "scan": "Scannen",
+    "start": "Start"
+  },
+  "disclaimer": "LabLens bietet nur edukative Zusammenfassungen und ersetzt keine medizinische Beratung.",
+  "safety": {
+    "critical": "Besprechen Sie dies mit Ihrer Ärztin oder Ihrem Arzt.",
+    "general": "Bei Fragen wenden Sie sich an Ihr Behandlungsteam."
+  },
+  "language": {
+    "label": "Sprache"
+  }
+}

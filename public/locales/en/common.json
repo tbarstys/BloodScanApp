@@ -1,0 +1,23 @@
+{
+  "appName": "LabLens",
+  "tagline": "Understand your lab results safely",
+  "navigation": {
+    "upload": "Upload",
+    "analyze": "Analyze",
+    "compare": "Compare",
+    "settings": "Settings",
+    "about": "About"
+  },
+  "actions": {
+    "scan": "Scan",
+    "start": "Start"
+  },
+  "disclaimer": "LabLens provides educational summaries only. It is not a substitute for professional medical advice.",
+  "safety": {
+    "critical": "Discuss with your clinician.",
+    "general": "For any medical concerns, consult your healthcare professional."
+  },
+  "language": {
+    "label": "Language"
+  }
+}

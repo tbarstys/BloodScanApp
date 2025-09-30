@@ -1,0 +1,23 @@
+{
+  "appName": "LabLens",
+  "tagline": "Supraskite savo tyrimų rezultatus saugiai",
+  "navigation": {
+    "upload": "Įkelti",
+    "analyze": "Analizė",
+    "compare": "Palyginti",
+    "settings": "Nustatymai",
+    "about": "Apie"
+  },
+  "actions": {
+    "scan": "Skenuoti",
+    "start": "Pradėti"
+  },
+  "disclaimer": "LabLens pateikia tik edukacines santraukas. Tai nėra medicininė konsultacija.",
+  "safety": {
+    "critical": "Pasitarkite su savo gydytoju.",
+    "general": "Dėl medicininių klausimų kreipkitės į sveikatos priežiūros specialistą."
+  },
+  "language": {
+    "label": "Kalba"
+  }
+}
