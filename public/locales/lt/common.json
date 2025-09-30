@@ -1,0 +1,20 @@
+{
+  "appName": "LabLens",
+  "disclaimer": "LabLens nepateikia medicininių patarimų. Naudokite informaciją pokalbiui su savo gydytoju.",
+  "nav": {
+    "upload": "Importas",
+    "analyze": "Ataskaita",
+    "compare": "Palyginimas",
+    "settings": "Nustatymai",
+    "about": "Apie"
+  },
+  "actions": {
+    "scan": "Skenuoti",
+    "start": "Pradėti",
+    "retry": "Bandyti dar kartą"
+  },
+  "safety": {
+    "critical": "Pasitarkite su savo gydytoju.",
+    "info": "Šis įrankis pateikia tik bendro pobūdžio paaiškinimus."
+  }
+}

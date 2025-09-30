@@ -1,0 +1,28 @@
+{
+  "analytes": [
+    {
+      "key": "ldl",
+      "label": "LDL",
+      "rawValue": 160,
+      "unit": "mg/dL",
+      "referenceRange": { "low": 0, "high": 129 },
+      "confidence": 0.85
+    },
+    {
+      "key": "hdl",
+      "label": "HDL",
+      "rawValue": 45,
+      "unit": "mg/dL",
+      "referenceRange": { "low": 40, "high": 59 },
+      "confidence": 0.8
+    },
+    {
+      "key": "triglycerides",
+      "label": "Triglycerides",
+      "rawValue": 220,
+      "unit": "mg/dL",
+      "referenceRange": { "low": 0, "high": 149 },
+      "confidence": 0.75
+    }
+  ]
+}

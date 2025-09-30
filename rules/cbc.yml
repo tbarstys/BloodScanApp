@@ -1,0 +1,55 @@
+panel: "CBC"
+locale_notes:
+  en: "Complete Blood Count"
+  de: "Blutbild"
+  lt: "Bendras kraujo tyrimas"
+analytes:
+  - key: "hemoglobin"
+    synonyms: ["Hb", "HGB", "Hemoglobin"]
+    unit: "g/dL"
+    ref_range:
+      male: [13.5, 17.5]
+      female: [12.0, 15.5]
+    logic:
+      - if: "< 7.0"
+        severity: "critical"
+        message:
+          en: "Severely low hemoglobin. Please discuss with your clinician promptly."
+          de: "Stark erniedrigtes Hämoglobin. Bitte umgehend ärztlich besprechen."
+          lt: "Labai sumažėjęs hemoglobinas. Kreipkitės į gydytoją."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below the typical range for hemoglobin."
+          de: "Unter dem üblichen Bereich für Hämoglobin."
+          lt: "Žemiau įprasto hemoglobino intervalo."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above the typical hemoglobin range."
+          de: "Über dem üblichen Hämoglobin-Bereich."
+          lt: "Virš įprasto hemoglobino intervalo."
+  - key: "wbc"
+    synonyms: ["WBC", "White Blood Cells"]
+    unit: "10^3/uL"
+    ref_range:
+      adult: [4.0, 11.0]
+    logic:
+      - if: "> 20"
+        severity: "critical"
+        message:
+          en: "Critically elevated white blood cells. Discuss with your clinician."
+          de: "Kritisch erhöhte Leukozyten. Bitte ärztlich abklären."
+          lt: "Kritiškai padidėję leukocitai. Pasitarkite su gydytoju."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below typical white blood cell counts."
+          de: "Unter dem üblichen Leukozytenbereich."
+          lt: "Žemiau įprasto leukocitų intervalo."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above typical white blood cell counts."
+          de: "Über dem üblichen Leukozytenbereich."
+          lt: "Virš įprasto leukocitų intervalo."

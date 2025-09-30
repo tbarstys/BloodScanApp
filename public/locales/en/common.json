@@ -1,0 +1,20 @@
+{
+  "appName": "LabLens",
+  "disclaimer": "LabLens does not provide medical advice. Use this information to support conversations with your clinician.",
+  "nav": {
+    "upload": "Import",
+    "analyze": "Report",
+    "compare": "Compare",
+    "settings": "Settings",
+    "about": "About"
+  },
+  "actions": {
+    "scan": "Scan",
+    "start": "Start",
+    "retry": "Try again"
+  },
+  "safety": {
+    "critical": "Discuss with your clinician.",
+    "info": "This tool offers friendly explanations only."
+  }
+}

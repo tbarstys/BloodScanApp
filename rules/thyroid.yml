@@ -1,0 +1,48 @@
+panel: "Thyroid"
+locale_notes:
+  en: "Thyroid Panel"
+  de: "Schilddrüsenprofil"
+  lt: "Skydliaukės tyrimas"
+analytes:
+  - key: "tsh"
+    synonyms: ["TSH"]
+    unit: "mIU/L"
+    ref_range:
+      adult: [0.4, 4.0]
+    logic:
+      - if: ">= 10"
+        severity: "critical"
+        message:
+          en: "TSH is very high. Discuss with your clinician."
+          de: "TSH ist sehr hoch. Bitte ärztlich besprechen."
+          lt: "TSH labai padidėjęs. Pasitarkite su gydytoju."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "TSH above the typical range."
+          de: "TSH über dem üblichen Bereich."
+          lt: "TSH virš įprastos ribos."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "TSH below the typical range."
+          de: "TSH unter dem üblichen Bereich."
+          lt: "TSH žemiau įprastos ribos."
+  - key: "ft4"
+    synonyms: ["Free T4", "FT4"]
+    unit: "ng/dL"
+    ref_range:
+      adult: [0.8, 1.8]
+    logic:
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Free T4 is below the typical range."
+          de: "Freies T4 unter dem üblichen Bereich."
+          lt: "Laisvas T4 žemiau įprastos ribos."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Free T4 is above the typical range."
+          de: "Freies T4 über dem üblichen Bereich."
+          lt: "Laisvas T4 virš įprastos ribos."
