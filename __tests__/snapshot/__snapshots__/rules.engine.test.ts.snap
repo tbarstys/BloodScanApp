@@ -1,0 +1,40 @@
+exports[`rules engine produces deterministic advice 1`] = `[
+  {
+    "analyte": "Hemoglobin",
+    "flags": [
+      {
+        "message": "Below the typical range. Monitor for fatigue and consult care team.",
+        "rule": "cbc:hemoglobin:< ref_low",
+        "severity": "flag-low"
+      }
+    ],
+    "normalized": {
+      "analyte": "Hemoglobin",
+      "confidence": 0.9,
+      "normalizedUnit": "g/L",
+      "normalizedValue": 68,
+      "referenceRange": "12.0 - 15.5",
+      "unit": "g/dL",
+      "value": 6.8
+    }
+  },
+  {
+    "analyte": "White Blood Cells",
+    "flags": [
+      {
+        "message": "Above typical range. Could reflect inflammation—review with clinician.",
+        "rule": "cbc:white blood cells:> ref_high",
+        "severity": "flag-high"
+      }
+    ],
+    "normalized": {
+      "analyte": "White Blood Cells",
+      "confidence": 0.92,
+      "normalizedUnit": "10^9/L",
+      "normalizedValue": 11,
+      "referenceRange": "4.0 - 10.5",
+      "unit": "10^3/µL",
+      "value": 11
+    }
+  }
+]`;

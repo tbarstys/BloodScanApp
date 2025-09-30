@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+storybook-static
+coverage
+playwright-report
+public/locales/*.po
+.env
+.env.*
+!.env.example
+pnpm-lock.yaml
+.DS_Store
+.husky/_

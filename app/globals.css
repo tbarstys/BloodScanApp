@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply min-h-screen bg-slate-50 text-slate-900 antialiased;
+}
+
+a {
+  @apply text-brand underline-offset-4 transition-colors hover:text-brand-dark;
+}
+
+button:focus-visible,
+a:focus-visible {
+  @apply outline-none ring-2 ring-brand ring-offset-2;
+}
+
+[data-focus-visible-added] {
+  @apply outline-none ring-2 ring-brand ring-offset-2;
+}

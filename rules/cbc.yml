@@ -1,0 +1,55 @@
+panel: "CBC"
+locale_notes:
+  en: "Complete Blood Count"
+  de: "Blutbild"
+  lt: "Bendras kraujo tyrimas"
+analytes:
+  - key: "hemoglobin"
+    synonyms: ["Hb", "HGB", "Hemoglobin"]
+    unit: "g/dL"
+    ref_range:
+      male: [13.5, 17.5]
+      female: [12.0, 15.5]
+    logic:
+      - if: "< 7.0"
+        severity: "critical"
+        message:
+          en: "Severely low hemoglobin. Please discuss with your clinician urgently."
+          de: "Stark erniedrigtes Hämoglobin. Bitte unverzüglich mit Ihrer Ärztin/Ihrem Arzt sprechen."
+          lt: "Labai sumažėjęs hemoglobinas. Nedelsdami pasitarkite su gydytoju."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below the typical range. Monitor for fatigue and consult care team."
+          de: "Unterhalb des Referenzbereichs. Beobachten Sie Müdigkeit und besprechen Sie dies mit dem Behandlungsteam."
+          lt: "Žemiau įprasto intervalo. Stebėkite nuovargį ir pasitarkite su gydytoju."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above the typical range. Ensure adequate hydration and follow-up testing."
+          de: "Oberhalb des Referenzbereichs. Achten Sie auf ausreichende Hydrierung und Folgeuntersuchungen."
+          lt: "Virš įprasto intervalo. Užtikrinkite tinkamą hidrataciją ir pakartotinį tyrimą."
+  - key: "white blood cells"
+    synonyms: ["WBC", "Leukocytes"]
+    unit: "10^3/µL"
+    ref_range:
+      adult: [4.0, 10.5]
+    logic:
+      - if: "> 30"
+        severity: "critical"
+        message:
+          en: "Critically elevated WBC. Seek urgent medical attention."
+          de: "Kritisch erhöhte Leukozyten. Suchen Sie umgehend medizinische Hilfe."
+          lt: "Kritiškai padidėję leukocitai. Nedelsdami kreipkitės į medikus."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below typical range. Discuss infection risk with your clinician."
+          de: "Unterhalb des Referenzbereichs. Besprechen Sie das Infektionsrisiko mit Ihrer Ärztin/Ihrem Arzt."
+          lt: "Žemiau įprasto intervalo. Aptarkite infekcijos riziką su gydytoju."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above typical range. Could reflect inflammation—review with clinician."
+          de: "Oberhalb des Referenzbereichs. Kann auf Entzündungen hinweisen—besprechen Sie dies mit der Ärztin/dem Arzt."
+          lt: "Virš įprasto intervalo. Gali rodyti uždegimą—pasitarkite su gydytoju."

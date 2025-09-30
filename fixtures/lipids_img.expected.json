@@ -1,0 +1,19 @@
+{
+  "rows": [
+    {
+      "analyte": "LDL Cholesterol",
+      "value": 110.0,
+      "unit": "mg/dL",
+      "referenceRange": "0 - 129",
+      "confidence": 0.93
+    },
+    {
+      "analyte": "HDL Cholesterol",
+      "value": 48.0,
+      "unit": "mg/dL",
+      "referenceRange": "40 - 60",
+      "confidence": 0.9
+    }
+  ],
+  "rawText": "LDL Cholesterol 110 mg/dL 0-129\nHDL Cholesterol 48 mg/dL 40-60"
+}

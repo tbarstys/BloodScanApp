@@ -1,0 +1,36 @@
+panel: "Lipids"
+locale_notes:
+  en: "Lipid Panel"
+  de: "Lipidprofil"
+  lt: "Lipidograma"
+analytes:
+  - key: "ldl cholesterol"
+    synonyms: ["LDL", "LDL Cholesterol"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [0, 129]
+    logic:
+      - if: ">= 190"
+        severity: "critical"
+        message:
+          en: "LDL is very high. Arrange urgent cardiovascular review."
+          de: "LDL ist sehr hoch. Vereinbaren Sie umgehend eine kardiologische Abklärung."
+          lt: "LDL labai aukštas. Nedelsdami pasitikrinkite pas kardiologą."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above target. Discuss nutrition and lifestyle adjustments."
+          de: "Über dem Zielwert. Besprechen Sie Ernährung und Lebensstil-Anpassungen."
+          lt: "Virš tikslo. Aptarkite mitybos ir gyvenimo būdo pokyčius."
+  - key: "hdl cholesterol"
+    synonyms: ["HDL", "HDL Cholesterol"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [40, 60]
+    logic:
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below desired HDL. Consider activity and nutrition with clinician guidance."
+          de: "HDL unter dem Zielwert. Besprechen Sie Aktivität und Ernährung mit medizinischer Begleitung."
+          lt: "HDL žemas. Aptarkite fizinį aktyvumą ir mitybą su gydytoju."
