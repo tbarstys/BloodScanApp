@@ -1,0 +1,36 @@
+panel: "Lipids"
+locale_notes:
+  en: "Lipid Panel"
+  de: "Lipidprofil"
+  lt: "Lipidograma"
+analytes:
+  - key: "ldl"
+    synonyms: ["LDL", "LDL-C"]
+    unit: "mg/dL"
+    ref_range:
+      optimal: [0, 100]
+    logic:
+      - if: ">= 190"
+        severity: "critical"
+        message:
+          en: "Very high LDL—seek clinician guidance."
+          de: "Sehr hoher LDL-Wert – medizinische Abklärung erforderlich."
+          lt: "Labai aukštas LDL – būtina gydytojo konsultacija."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above optimal range."
+          de: "Über dem Optimalbereich."
+          lt: "Virš optimalaus intervalo."
+  - key: "hdl"
+    synonyms: ["HDL", "HDL-C"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [40, 60]
+    logic:
+      - if: "< 40"
+        severity: "flag-low"
+        message:
+          en: "Below recommended range."
+          de: "Unter empfohlenem Bereich."
+          lt: "Žemiau rekomenduojamo intervalo."

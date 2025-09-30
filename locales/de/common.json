@@ -1,0 +1,16 @@
+{
+  "tagline": "Private Laborwerte ohne medizinische Beratung",
+  "navigation": "Hauptnavigation",
+  "nav.upload": "Import",
+  "nav.analyze": "Analyse",
+  "nav.compare": "Vergleich",
+  "nav.settings": "Einstellungen",
+  "nav.about": "Info",
+  "upload.title": "Befunde importieren",
+  "upload.subtitle": "PDFs, Bilder oder manuelle Eingabe",
+  "analyze.title": "Extrahierte Werte prüfen",
+  "compare.title": "Was hat sich geändert?",
+  "settings.title": "Einstellungen",
+  "about.title": "Über LabLens",
+  "nav.demo": "Demo"
+}

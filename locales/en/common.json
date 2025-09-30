@@ -1,0 +1,16 @@
+{
+  "tagline": "Private lab insights without medical advice",
+  "navigation": "Main navigation",
+  "nav.upload": "Upload",
+  "nav.analyze": "Analyze",
+  "nav.compare": "Compare",
+  "nav.settings": "Settings",
+  "nav.about": "About",
+  "upload.title": "Import results",
+  "upload.subtitle": "PDFs, images, or manual entry",
+  "analyze.title": "Review extracted values",
+  "compare.title": "What changed?",
+  "settings.title": "Preferences",
+  "about.title": "About LabLens",
+  "nav.demo": "Demo"
+}
