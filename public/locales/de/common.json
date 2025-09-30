@@ -1,0 +1,94 @@
+{
+  "home": {
+    "title": "Willkommen bei LabLens",
+    "tagline": "Verstehen Sie Laborwerte mit Datenschutz auf Ihrem Gerät.",
+    "localFirstTitle": "Privacy-by-Design",
+    "localFirstBody": "Die Verarbeitung bleibt auf Ihrem Gerät, sofern Sie keine Cloud-Funktionen aktivieren."
+  },
+  "actions": {
+    "startScan": "Scan starten",
+    "compare": "Vergleichen",
+    "scan": "Scannen"
+  },
+  "nav": {
+    "label": "Hauptnavigation",
+    "home": "Start",
+    "upload": "Import",
+    "analyze": "Analyse",
+    "compare": "Vergleich",
+    "settings": "Einstellungen"
+  },
+  "upload": {
+    "title": "Laborbefunde importieren",
+    "tabLabel": "Importoptionen",
+    "tabs": {
+      "upload": "Dateien",
+      "camera": "Kamera",
+      "manual": "Manuell"
+    },
+    "dropzonePrimary": "Dateien hier ablegen oder tippen zum Auswählen",
+    "dropzoneSecondary": "PDF, JPG oder PNG bis 15 MB",
+    "inputLabel": "Labordateien hochladen",
+    "manualPrompt": "Werte manuell erfassen, falls keine Datei vorhanden ist.",
+    "openManualForm": "Manuelle Eingabe öffnen",
+    "supportedFormats": "Unterstützte Formate",
+    "format": {
+      "pdf": "Mehrseitige PDF-Berichte",
+      "image": "Fotos und Scans",
+      "manual": "Strukturierte manuelle Eingabe"
+    }
+  },
+  "analyze": {
+    "title": "Analyse",
+    "subtitle": "Ausgelesene Werte und sichere Erläuterungen",
+    "trendTitle": "Trendübersicht"
+  },
+  "compare": {
+    "title": "Was hat sich geändert?",
+    "subtitle": "Vergleichen Sie zwei Zeitpunkte und sehen Sie Veränderungen",
+    "delta": "Änderung um {{value}} {{unit}}"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Sprache, Einheiten und Einwilligungen verwalten",
+    "language": "Sprache",
+    "units": "Einheiten",
+    "consents": "Einwilligungen",
+    "cloudOcr": "Cloud-OCR verwenden (nur mit ausdrücklicher Zustimmung)",
+    "llm": "LLM-Normalisierung nutzen (standardmäßig aus)",
+    "telemetry": "Anonyme Telemetrie",
+    "privacyTitle": "Sicherheitsmodus",
+    "privacyBody": "LabLens analysiert lokal und entfernt Metadaten. Details im Sicherheitsbereich.",
+    "save": "Speichern",
+    "saving": "Speichern..."
+  },
+  "privacy": {
+    "localFirst": "Lokale Verarbeitung"
+  },
+  "disclaimer": {
+    "medicalSafety": "LabLens ist kein Medizinprodukt und ersetzt keine ärztliche Beratung.",
+    "emergencyEscalation": "Bei akuten Beschwerden wenden Sie sich bitte an den Notdienst oder Ihre Ärztin/Ihren Arzt."
+  },
+  "report": {
+    "sourceValue": "Quelle: {{value}}",
+    "criticalEscalation": "Bitte umgehend ärztlich abklären lassen."
+  },
+  "camera": {
+    "permissionError": "Kamerazugriff verweigert. Bitte aktivieren, um ein Foto aufzunehmen.",
+    "previewLabel": "Live-Kameravorschau",
+    "alignmentTip": "Richten Sie die Laborseite innerhalb des Rahmens aus",
+    "captureButton": "Aufnehmen"
+  },
+  "safety": {
+    "title": "Sicherheitsmodus",
+    "body": "Wir schwärzen personenbezogene Angaben, erzwingen Sicherheits-Header und verkaufen keine Daten.",
+    "escalationTitle": "Wann eskalieren?",
+    "escalationBody": "Bei kritischen Hinweisen oder Unwohlsein wenden Sie sich an Ihr Behandlungsteam."
+  },
+  "about": {
+    "title": "Über LabLens",
+    "body": "LabLens unterstützt Menschen dabei, Labortendenzen mit deterministischen Regeln und Mehrsprachigkeit zu verstehen.",
+    "safetyTitle": "Unsere Schutzmaßnahmen",
+    "safetyBody": "Wir liefern nur kontextuelle Informationen. Entscheidungen zur Behandlung gehören in ärztliche Hände."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "home": {
+    "title": "Welcome to LabLens",
+    "tagline": "Understand your lab work with local-first privacy.",
+    "localFirstTitle": "Privacy-first by design",
+    "localFirstBody": "All processing stays on your device unless you opt in to cloud features."
+  },
+  "actions": {
+    "startScan": "Start a scan",
+    "compare": "Compare results",
+    "scan": "Scan"
+  },
+  "nav": {
+    "label": "Primary navigation",
+    "home": "Home",
+    "upload": "Upload",
+    "analyze": "Analyze",
+    "compare": "Compare",
+    "settings": "Settings"
+  },
+  "upload": {
+    "title": "Import lab results",
+    "tabLabel": "Import options",
+    "tabs": {
+      "upload": "Files",
+      "camera": "Camera",
+      "manual": "Manual"
+    },
+    "dropzonePrimary": "Drop files here or tap to browse",
+    "dropzoneSecondary": "PDF, JPG or PNG up to 15 MB",
+    "inputLabel": "Upload laboratory files",
+    "manualPrompt": "Enter values manually if you do not have files.",
+    "openManualForm": "Open manual entry",
+    "supportedFormats": "Supported formats",
+    "format": {
+      "pdf": "Multi-page PDF reports",
+      "image": "Photos and scans",
+      "manual": "Structured manual entry"
+    }
+  },
+  "analyze": {
+    "title": "Analysis",
+    "subtitle": "Parsed values and safe explanations",
+    "trendTitle": "Trend overview"
+  },
+  "compare": {
+    "title": "What changed?",
+    "subtitle": "Compare two time points and highlight shifts",
+    "delta": "Change of {{value}} {{unit}}"
+  },
+  "settings": {
+    "title": "Preferences",
+    "subtitle": "Configure language, units, and consent toggles",
+    "language": "Language",
+    "units": "Units",
+    "consents": "Consents",
+    "cloudOcr": "Use cloud OCR (requires explicit consent)",
+    "llm": "Use LLM-based normalization (off by default)",
+    "telemetry": "Anonymous telemetry",
+    "privacyTitle": "Safety mode",
+    "privacyBody": "LabLens runs analysis locally and strips metadata. Review safety details in the safety page.",
+    "save": "Save settings",
+    "saving": "Saving..."
+  },
+  "privacy": {
+    "localFirst": "Local processing"
+  },
+  "disclaimer": {
+    "medicalSafety": "LabLens is not a medical device and does not provide medical advice.",
+    "emergencyEscalation": "If you have urgent symptoms, contact emergency services or your clinician."
+  },
+  "report": {
+    "sourceValue": "Source: {{value}}",
+    "criticalEscalation": "Discuss immediately with your clinician."
+  },
+  "camera": {
+    "permissionError": "Camera permission denied. Please enable access to capture a photo.",
+    "previewLabel": "Live camera preview",
+    "alignmentTip": "Align the lab page within the frame",
+    "captureButton": "Capture"
+  },
+  "safety": {
+    "title": "Safety mode",
+    "body": "We redact personal identifiers, enforce strict security headers, and never sell data.",
+    "escalationTitle": "When to escalate",
+    "escalationBody": "If any critical flags appear or you feel unwell, reach out to your clinical team."
+  },
+  "about": {
+    "title": "About LabLens",
+    "body": "LabLens helps people interpret laboratory trends using deterministic rules and multilingual explanations.",
+    "safetyTitle": "Our guardrails",
+    "safetyBody": "We provide supportive context only. Treatment decisions belong with clinicians."
+  }
+}

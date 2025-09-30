@@ -1,0 +1,94 @@
+{
+  "home": {
+    "title": "Sveiki atvykę į LabLens",
+    "tagline": "Supraskite laboratorinius tyrimus saugiai savo įrenginyje.",
+    "localFirstTitle": "Privatumas pirmiausia",
+    "localFirstBody": "Visa analizė vykdoma vietoje, kol neįjungiate debesijos funkcijų."
+  },
+  "actions": {
+    "startScan": "Pradėti nuskaitymą",
+    "compare": "Palyginti",
+    "scan": "Skenuoti"
+  },
+  "nav": {
+    "label": "Pagrindinė navigacija",
+    "home": "Pradžia",
+    "upload": "Importas",
+    "analyze": "Analizė",
+    "compare": "Palyginimas",
+    "settings": "Nustatymai"
+  },
+  "upload": {
+    "title": "Importuokite tyrimų rezultatus",
+    "tabLabel": "Importo būdai",
+    "tabs": {
+      "upload": "Failai",
+      "camera": "Kamera",
+      "manual": "Rankiniu būdu"
+    },
+    "dropzonePrimary": "Nuvilkite failus arba pasirinkite",
+    "dropzoneSecondary": "PDF, JPG ar PNG iki 15 MB",
+    "inputLabel": "Įkelti laboratorinius failus",
+    "manualPrompt": "Jei neturite failo, įveskite reikšmes rankiniu būdu.",
+    "openManualForm": "Atverti formą",
+    "supportedFormats": "Palaikomi formatai",
+    "format": {
+      "pdf": "Daugelio puslapių PDF ataskaitos",
+      "image": "Nuotraukos ir skenai",
+      "manual": "Struktūrinis rankinis įvedimas"
+    }
+  },
+  "analyze": {
+    "title": "Analizė",
+    "subtitle": "Išgautos reikšmės ir saugūs paaiškinimai",
+    "trendTitle": "Tendencijų apžvalga"
+  },
+  "compare": {
+    "title": "Kas pasikeitė?",
+    "subtitle": "Palyginkite du laikotarpius ir matykite pokyčius",
+    "delta": "Pokytis {{value}} {{unit}}"
+  },
+  "settings": {
+    "title": "Nustatymai",
+    "subtitle": "Pasirinkite kalbą, matavimo vienetus ir sutikimus",
+    "language": "Kalba",
+    "units": "Vienetai",
+    "consents": "Sutikimai",
+    "cloudOcr": "Naudoti debesijos OCR (tik gavus sutikimą)",
+    "llm": "Naudoti LLM normalizaciją (pagal nutylėjimą išjungta)",
+    "telemetry": "Anoniminė telemetrija",
+    "privacyTitle": "Saugos režimas",
+    "privacyBody": "LabLens analizuoja lokaliai ir pašalina metaduomenis. Išsamiau – saugos puslapyje.",
+    "save": "Išsaugoti",
+    "saving": "Išsaugoma..."
+  },
+  "privacy": {
+    "localFirst": "Vietinė analizė"
+  },
+  "disclaimer": {
+    "medicalSafety": "LabLens nėra medicinos prietaisas ir neteikia medicininių patarimų.",
+    "emergencyEscalation": "Jei jaučiatės blogai, kreipkitės į gydytoją ar skubią pagalbą."
+  },
+  "report": {
+    "sourceValue": "Reikšmė: {{value}}",
+    "criticalEscalation": "Nedelsdami aptarkite su gydytoju."
+  },
+  "camera": {
+    "permissionError": "Kameros prieiga uždrausta. Įjunkite, kad galėtumėte fotografuoti.",
+    "previewLabel": "Tiesioginė kameros peržiūra",
+    "alignmentTip": "Sulygiuokite lapą rėmelyje",
+    "captureButton": "Fotografuoti"
+  },
+  "safety": {
+    "title": "Saugos režimas",
+    "body": "Maskuojame asmens duomenis, taikome saugumo antraštes ir niekada neparduodame duomenų.",
+    "escalationTitle": "Kada kreiptis?",
+    "escalationBody": "Esant kritiniams rodikliams ar blogai savijautai, kreipkitės į medicinos specialistus."
+  },
+  "about": {
+    "title": "Apie LabLens",
+    "body": "LabLens padeda suprasti laboratorinius rodiklius naudojant deterministines taisykles ir kelių kalbų paaiškinimus.",
+    "safetyTitle": "Apsaugos principai",
+    "safetyBody": "Teikiame tik bendro pobūdžio informaciją. Sprendimus dėl gydymo priima gydytojai."
+  }
+}

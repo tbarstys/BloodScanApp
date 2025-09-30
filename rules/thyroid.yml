@@ -1,0 +1,30 @@
+panel: "Thyroid"
+locale_notes:
+  en: "Thyroid Function"
+  de: "Schilddrüsenfunktion"
+  lt: "Skydliaukės funkcija"
+analytes:
+  - key: "tsh"
+    synonyms: ["TSH", "Thyroid Stimulating Hormone"]
+    unit: "mIU/L"
+    ref_range:
+      adult: [0.4, 4.0]
+    logic:
+      - if: ">= 20"
+        severity: "critical"
+        message:
+          en: "Markedly elevated TSH. Urgent endocrine review recommended."
+          de: "Stark erhöhtes TSH. Dringend endokrinologische Abklärung empfohlen."
+          lt: "Labai padidėjęs TSH. Rekomenduojama skubi endokrinologo konsultacija."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above typical range. Discuss thyroid management with clinician."
+          de: "Über dem Referenzbereich. Besprechen Sie die Schilddrüsenbehandlung mit der Ärztin/dem Arzt."
+          lt: "Virš normos. Aptarkite skydliaukės valdymą su gydytoju."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below typical range. Review symptoms and therapy with clinician."
+          de: "Unter dem Referenzbereich. Besprechen Sie Symptome und Therapie mit der Ärztin/dem Arzt."
+          lt: "Žemiau normos. Aptarkite simptomus ir gydymą su gydytoju."

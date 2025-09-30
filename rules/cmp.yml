@@ -1,0 +1,48 @@
+panel: "CMP"
+locale_notes:
+  en: "Comprehensive Metabolic Panel"
+  de: "Großes Blutbild Chemie"
+  lt: "Išsamus metabolinis tyrimas"
+analytes:
+  - key: "glucose"
+    synonyms: ["Glucose", "GLU"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [70, 99]
+    logic:
+      - if: ">= 400"
+        severity: "critical"
+        message:
+          en: "Markedly elevated glucose. Contact emergency services."
+          de: "Stark erhöhtes Glukoselevel. Wenden Sie sich an den Notdienst."
+          lt: "Labai padidėjusi gliukozė. Kreipkitės į skubią pagalbą."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below reference range. Ensure timely carbohydrate intake and consult clinician."
+          de: "Unterhalb des Referenzbereichs. Achten Sie auf rechtzeitige Kohlenhydratzufuhr und sprechen Sie mit der Ärztin/dem Arzt."
+          lt: "Žemiau normos. Užtikrinkite angliavandenių suvartojimą ir pasitarkite su gydytoju."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above reference range. Review diet and activity with your clinician."
+          de: "Oberhalb des Referenzbereichs. Besprechen Sie Ernährung und Aktivität mit der Ärztin/dem Arzt."
+          lt: "Virš normos. Aptarkite mitybą ir aktyvumą su gydytoju."
+  - key: "creatinine"
+    synonyms: ["Creatinine"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [0.6, 1.3]
+    logic:
+      - if: ">= 6"
+        severity: "critical"
+        message:
+          en: "Severely elevated creatinine. Seek urgent nephrology review."
+          de: "Stark erhöhtes Kreatinin. Suchen Sie dringend nephrologische Abklärung."
+          lt: "Labai padidėjęs kreatininas. Nedelsdami pasikonsultuokite su nefrologu."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above reference range. Review hydration status and kidney health with clinician."
+          de: "Oberhalb des Referenzbereichs. Prüfen Sie Hydratation und Nierenfunktion mit der Ärztin/dem Arzt."
+          lt: "Virš normos. Aptarkite hidrataciją ir inkstų būklę su gydytoju."

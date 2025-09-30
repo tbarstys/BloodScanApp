@@ -1,0 +1,16 @@
+exports[`parseTableText parses lipids table text deterministically 1`] = `[
+  {
+    "analyte": "LDL Cholesterol",
+    "confidence": 0.95,
+    "referenceRange": "0-129",
+    "unit": "mg/dL",
+    "value": 110
+  },
+  {
+    "analyte": "HDL Cholesterol",
+    "confidence": 0.95,
+    "referenceRange": "40-60",
+    "unit": "mg/dL",
+    "value": 48
+  }
+]`;
