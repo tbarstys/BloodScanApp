@@ -1,0 +1,50 @@
+panel: "CBC"
+locale_notes:
+  en: "Complete Blood Count"
+  de: "Blutbild"
+  lt: "Bendras kraujo tyrimas"
+analytes:
+  - key: "Hemoglobin"
+    synonyms: ["Hb", "HGB", "Hemoglobin"]
+    unit: "g/dL"
+    ref_range:
+      male: [13.5, 17.5]
+      female: [12.0, 15.5]
+    logic:
+      - if: "< 7.0"
+        severity: "critical"
+        message:
+          en: "Severely low hemoglobin. Discuss with your clinician."
+          de: "Stark erniedrigtes Hämoglobin. Suchen Sie ärztlichen Rat."
+          lt: "Labai sumažėjęs hemoglobinas. Kreipkitės į gydytoją."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below the typical range."
+          de: "Unter dem Referenzbereich."
+          lt: "Žemiau normos."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above the typical range."
+          de: "Über dem Referenzbereich."
+          lt: "Virš normos."
+  - key: "White Blood Cells"
+    synonyms: ["WBC"]
+    unit: "10^3/µL"
+    ref_range:
+      male: [4.0, 11.0]
+      female: [4.0, 11.0]
+    logic:
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Low white blood cells may reduce immune defence."
+          de: "Niedrige Leukozyten können die Abwehr schwächen."
+          lt: "Mažas leukocitų skaičius gali silpninti imunitetą."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Elevated white blood cells may indicate inflammation."
+          de: "Erhöhte Leukozyten können auf Entzündung hinweisen."
+          lt: "Padidėję leukocitai gali rodyti uždegimą."

@@ -1,0 +1,32 @@
+panel: "Lipids"
+locale_notes:
+  en: "Lipid Panel"
+  de: "Lipidprofil"
+  lt: "Lipidų tyrimas"
+analytes:
+  - key: "Cholesterol"
+    synonyms: ["Total Cholesterol"]
+    unit: "mg/dL"
+    ref_range:
+      male: [0, 200]
+      female: [0, 200]
+    logic:
+      - if: "> 240"
+        severity: "flag-high"
+        message:
+          en: "Cholesterol is above the desirable range. Discuss lifestyle options."
+          de: "Cholesterin liegt über dem wünschenswerten Bereich."
+          lt: "Cholesterolis virš norimos ribos."
+  - key: "Triglycerides"
+    synonyms: ["Triglycerides"]
+    unit: "mg/dL"
+    ref_range:
+      male: [0, 150]
+      female: [0, 150]
+    logic:
+      - if: "> 500"
+        severity: "critical"
+        message:
+          en: "Triglycerides in this range require urgent clinical discussion."
+          de: "Triglyzeride in diesem Bereich sollten umgehend ärztlich besprochen werden."
+          lt: "Tokie trigliceridų rodmenys reikalauja skubios gydytojo konsultacijos."

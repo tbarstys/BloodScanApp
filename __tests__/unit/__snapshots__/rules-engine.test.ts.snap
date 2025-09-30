@@ -1,0 +1,28 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`rules engine matches snapshot for hemoglobin 1`] = `[
+  {
+    "analyte": "Hemoglobin",
+    "id": "1",
+    "messages": [
+      {
+        "message": "Severely low hemoglobin. Discuss with your clinician.",
+        "severity": "critical"
+      },
+      {
+        "message": "Below the typical range.",
+        "severity": "flag-low"
+      }
+    ],
+    "normalizedUnit": "g/dL",
+    "normalizedValue": 6.8,
+    "reference": {
+      "high": 17.5,
+      "low": 13.5,
+      "unit": "g/dL"
+    },
+    "status": "critical",
+    "unit": "g/dL",
+    "value": 6.8
+  }
+]`;

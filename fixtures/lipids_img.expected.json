@@ -1,0 +1,15 @@
+{
+  "panel": "Lipids",
+  "analytes": [
+    {
+      "analyte": "Cholesterol",
+      "value": 180,
+      "unit": "mg/dL"
+    },
+    {
+      "analyte": "Triglycerides",
+      "value": 140,
+      "unit": "mg/dL"
+    }
+  ]
+}

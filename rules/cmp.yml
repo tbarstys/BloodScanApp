@@ -1,0 +1,38 @@
+panel: "CMP"
+locale_notes:
+  en: "Comprehensive Metabolic Panel"
+  de: "Komprehensives Stoffwechselprofil"
+  lt: "Išsamus metabolinis panelis"
+analytes:
+  - key: "Glucose"
+    synonyms: ["Glucose", "Blood Glucose"]
+    unit: "mg/dL"
+    ref_range:
+      male: [70, 99]
+      female: [70, 99]
+    logic:
+      - if: "< 60"
+        severity: "critical"
+        message:
+          en: "Very low glucose may cause hypoglycaemia symptoms."
+          de: "Sehr niedriger Glukosewert kann Hypoglykämie auslösen."
+          lt: "Labai žema gliukozė gali sukelti hipoglikemiją."
+      - if: ">= 126"
+        severity: "flag-high"
+        message:
+          en: "Fasting glucose above expected range; monitor with your clinician."
+          de: "Nüchternglukose über Erwartung; mit Ärztin/Arzt besprechen."
+          lt: "Nuošliaužusi gliukozė virš normos; pasitarkite su gydytoju."
+  - key: "Creatinine"
+    synonyms: ["Creatinine"]
+    unit: "mg/dL"
+    ref_range:
+      male: [0.7, 1.3]
+      female: [0.6, 1.1]
+    logic:
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Creatinine above range can reflect kidney strain."
+          de: "Erhöhtes Kreatinin kann auf Nierenbelastung hinweisen."
+          lt: "Padidėjęs kreatininas gali rodyti inkstų apkrovą."
