@@ -1,0 +1,55 @@
+panel: "CBC"
+locale_notes:
+  en: "Complete Blood Count"
+  de: "Blutbild"
+  lt: "Bendras kraujo tyrimas"
+analytes:
+  - key: "hemoglobin"
+    synonyms: ["Hb", "HGB", "Hemoglobin"]
+    unit: "g/dL"
+    ref_range:
+      male: [13.5, 17.5] # WHO 2011 Hemoglobin thresholds
+      female: [12.0, 15.5]
+    logic:
+      - if: "< 7.0"
+        severity: "critical"
+        message:
+          en: "Severely low hemoglobin—seek urgent clinician review."
+          de: "Stark erniedrigtes Hämoglobin – bitte sofort Ärztin/Arzt kontaktieren."
+          lt: "Labai sumažėjęs hemoglobinas – būtina skubi gyd. konsultacija."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below the typical range."
+          de: "Unter dem typischen Bereich."
+          lt: "Žemiau įprasto intervalo."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above the typical range."
+          de: "Über dem typischen Bereich."
+          lt: "Viršija įprastą intervalą."
+  - key: "wbc"
+    synonyms: ["WBC", "Leukocytes"]
+    unit: "10^3/uL"
+    ref_range:
+      adult: [4.0, 11.0]
+    logic:
+      - if: "< 2.0"
+        severity: "critical"
+        message:
+          en: "Critically low white cells—immune suppression risk."
+          de: "Kritisch niedrige Leukozyten – Immunsuppression möglich."
+          lt: "Kritiškai sumažėję leukocitai – infekcijų rizika."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below reference range."
+          de: "Unter dem Referenzbereich."
+          lt: "Žemiau normos."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above reference range."
+          de: "Über Referenzbereich."
+          lt: "Virš normos."

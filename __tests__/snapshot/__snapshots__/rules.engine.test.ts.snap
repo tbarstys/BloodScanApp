@@ -1,0 +1,16 @@
+exports[`rules engine snapshots evaluates hemoglobin flags deterministically 1`] = `
+[
+  {
+    "analyte": "hemoglobin",
+    "message": "Severely low hemoglobin—seek urgent clinician review.",
+    "severity": "critical",
+    "triggeredCondition": "< 7.0"
+  },
+  {
+    "analyte": "hemoglobin",
+    "message": "Below the typical range.",
+    "severity": "flag-low",
+    "triggeredCondition": "< ref_low"
+  }
+]
+`;

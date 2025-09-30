@@ -1,0 +1,42 @@
+panel: "CMP"
+locale_notes:
+  en: "Comprehensive Metabolic Panel"
+  de: "Großes Stoffwechselprofil"
+  lt: "Išsamus metabolinis tyrimas"
+analytes:
+  - key: "glucose"
+    synonyms: ["Glucose", "Blood Glucose"]
+    unit: "mg/dL"
+    ref_range:
+      fasting: [70, 99]
+    logic:
+      - if: "< 54"
+        severity: "critical"
+        message:
+          en: "Critical low glucose—risk of hypoglycemia."
+          de: "Kritisch niedriger Glukosewert – Hypoglykämie-Risiko."
+          lt: "Kritiškai sumažėjusi gliukozė – hipoglikemijos rizika."
+      - if: ">= 126"
+        severity: "flag-high"
+        message:
+          en: "Above fasting reference. Discuss with clinician."
+          de: "Über dem nüchternen Referenzbereich. Bitte mit Ärztin/Arzt besprechen."
+          lt: "Viršija nevalgius normą. Aptarkite su gydytoju."
+  - key: "creatinine"
+    synonyms: ["Creatinine"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [0.7, 1.3]
+    logic:
+      - if: "< 0.4"
+        severity: "flag-low"
+        message:
+          en: "Below expected range—consider hydration context."
+          de: "Unter erwarteter Spanne – Hydratation berücksichtigen."
+          lt: "Žemiau tikėtinos ribos – įvertinkite hidrataciją."
+      - if: "> 2.0"
+        severity: "flag-high"
+        message:
+          en: "Above typical range—monitor kidney function."
+          de: "Über typischer Spanne – Nierenfunktion überwachen."
+          lt: "Virš normos – stebėti inkstų funkciją."

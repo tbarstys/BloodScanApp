@@ -1,0 +1,24 @@
+panel: "Thyroid"
+locale_notes:
+  en: "Thyroid Function"
+  de: "Schilddrüsenwerte"
+  lt: "Skydliaukės tyrimai"
+analytes:
+  - key: "tsh"
+    synonyms: ["TSH", "Thyroid Stimulating Hormone"]
+    unit: "mIU/L"
+    ref_range:
+      adult: [0.4, 4.0]
+    logic:
+      - if: "< 0.1"
+        severity: "flag-low"
+        message:
+          en: "TSH markedly low—consider clinician input for hyperthyroid patterns."
+          de: "Sehr niedriger TSH – ärztliche Abklärung empfohlen."
+          lt: "Labai sumažėjęs TSH – būtina gydytojo konsultacija."
+      - if: "> 10"
+        severity: "critical"
+        message:
+          en: "TSH very high—clinical review advised."
+          de: "Sehr hoher TSH – ärztliche Abklärung notwendig."
+          lt: "Labai padidėjęs TSH – būtina gydytojo konsultacija."
