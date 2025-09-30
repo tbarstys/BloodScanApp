@@ -1,0 +1,20 @@
+{
+  "appName": "LabLens",
+  "disclaimer": "LabLens bietet keine medizinische Beratung. Nutzen Sie die Informationen für das Gespräch mit Ihrer Ärztin oder Ihrem Arzt.",
+  "nav": {
+    "upload": "Import",
+    "analyze": "Bericht",
+    "compare": "Vergleich",
+    "settings": "Einstellungen",
+    "about": "Info"
+  },
+  "actions": {
+    "scan": "Scannen",
+    "start": "Start",
+    "retry": "Erneut versuchen"
+  },
+  "safety": {
+    "critical": "Besprechen Sie die Werte mit Ihrer Ärztin oder Ihrem Arzt.",
+    "info": "Dieses Werkzeug gibt nur allgemein verständliche Hinweise."
+  }
+}

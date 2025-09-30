@@ -1,0 +1,54 @@
+panel: "Lipids"
+locale_notes:
+  en: "Lipid Panel"
+  de: "Lipidprofil"
+  lt: "Lipidograma"
+analytes:
+  - key: "ldl"
+    synonyms: ["LDL", "Low Density Lipoprotein"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [0, 129]
+    logic:
+      - if: ">= 190"
+        severity: "critical"
+        message:
+          en: "LDL cholesterol is very high. Discuss with your clinician."
+          de: "LDL-Cholesterin ist sehr hoch. Bitte ärztlich besprechen."
+          lt: "Labai padidėjęs MTL cholesterolis. Pasitarkite su gydytoju."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "LDL cholesterol is above the typical range."
+          de: "LDL-Cholesterin liegt über dem üblichen Bereich."
+          lt: "MTL cholesterolis virš įprasto intervalo."
+  - key: "hdl"
+    synonyms: ["HDL", "High Density Lipoprotein"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [40, 59]
+    logic:
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "HDL cholesterol is below the desirable range."
+          de: "HDL-Cholesterin unter dem wünschenswerten Bereich."
+          lt: "DTL cholesterolis žemiau pageidaujamos ribos."
+  - key: "triglycerides"
+    synonyms: ["Triglycerides"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [0, 149]
+    logic:
+      - if: ">= 500"
+        severity: "critical"
+        message:
+          en: "Triglycerides are critically high."
+          de: "Triglyceride sind kritisch erhöht."
+          lt: "Trigliceridai kritiškai padidėję."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Triglycerides are above the typical range."
+          de: "Triglyceride liegen über dem üblichen Bereich."
+          lt: "Trigliceridai virš įprastos ribos."

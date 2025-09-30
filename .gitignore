@@ -1,0 +1,12 @@
+/node_modules
+/.next
+/out
+/dist
+/.turbo
+pnpm-lock.yaml
+*.log
+storybook-static
+/playwright-report
+/test-results
+.DS_Store
+.husky/_

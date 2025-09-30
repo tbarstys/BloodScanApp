@@ -1,0 +1,48 @@
+panel: "CMP"
+locale_notes:
+  en: "Comprehensive Metabolic Panel"
+  de: "Großes Blutbild"
+  lt: "Biocheminis kraujo tyrimas"
+analytes:
+  - key: "glucose"
+    synonyms: ["Glucose", "Glukose"]
+    unit: "mg/dL"
+    ref_range:
+      fasting: [70, 99]
+    logic:
+      - if: ">= 200"
+        severity: "critical"
+        message:
+          en: "Very high glucose detected. Discuss with your clinician."
+          de: "Sehr hoher Glukosewert. Bitte mit Ärztin oder Arzt besprechen."
+          lt: "Labai padidėjusi gliukozė. Pasitarkite su gydytoju."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above the typical fasting glucose range."
+          de: "Über dem üblichen Nüchternglukosebereich."
+          lt: "Virš įprastos gliukozės ribos."
+      - if: "< ref_low"
+        severity: "flag-low"
+        message:
+          en: "Below typical fasting glucose range."
+          de: "Unter dem üblichen Nüchternglukosebereich."
+          lt: "Žemiau įprastos gliukozės ribos."
+  - key: "creatinine"
+    synonyms: ["Creatinine"]
+    unit: "mg/dL"
+    ref_range:
+      adult: [0.6, 1.3]
+    logic:
+      - if: ">= 3.0"
+        severity: "critical"
+        message:
+          en: "Creatinine is critically elevated."
+          de: "Kreatinin ist kritisch erhöht."
+          lt: "Kreatininas kritiškai padidėjęs."
+      - if: "> ref_high"
+        severity: "flag-high"
+        message:
+          en: "Above typical creatinine range."
+          de: "Über dem üblichen Kreatininbereich."
+          lt: "Virš įprasto kreatinino intervalo."
